@@ -65,4 +65,7 @@
       - MME(できれば)
 ## 開発環境・ライブラリ
 未定
-- UIはWPFかなぁ…
+- WPF(C#）or MFC(C++) or WinForms(.NET)
+- NAudio(.NET)
+- DXライブラリ(ゲーム用C++ライブラリC#もいける、WASAPI対応、クロスプラットフォーム)
+- OpenAL
