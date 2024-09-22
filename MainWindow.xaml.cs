@@ -33,15 +33,14 @@ namespace HeartfulMusicPlayer
         }*/
         //ファイルのクラス型変数の宣言と初期化
         private OpenFileDialog File0 = new OpenFileDialog();
-        private WasapiOut outputDevice = new WasapiOut();
         public void buttonOpenFile_Click(object sender, RoutedEventArgs e)
         {
             if (File0.ShowDialog() == true)
             {
-                //読み込み
+                var outputDevice = new WasapiOut();
                 var audioFile = new AudioFileReader(File0.FileName);
-                outputDevice.Init(audioFile);
 
+                outputDevice.Init(audioFile);
                 MessageBox.Show("Loaded.");
             }
             else
@@ -52,17 +51,21 @@ namespace HeartfulMusicPlayer
         }
         private void buttonPlaySound_Click(object sender, RoutedEventArgs e)
         {
-            playSoundTestWASAPI();
+            playSoundTestWASAPI(File0.FileName);
 
-
+            
         }
         //private OpenFileDialog openFile() { return new OpenFileDialog(); }
-        private void playSoundTestWASAPI()
+        private void playSoundTestWASAPI(string filename)
         {
-            outputDevice.Play();
+            var outputDevice = new WasapiOut();
+            var audioFile = new AudioFileReader(filename);
 
+            outputDevice.Init(audioFile);
+            outputDevice.Play();
+            
         }
 
-
+        
     }
 }
