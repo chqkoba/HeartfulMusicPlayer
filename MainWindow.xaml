@@ -6,8 +6,16 @@
         xmlns:local="clr-namespace:HeartfulMusicPlayer"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="TestGrid">
         <Button x:Name="buttonPlaySound" Content="Play" HorizontalAlignment="Left" Margin="230,147,0,0" VerticalAlignment="Top" Height="97" Width="266" Click="buttonPlaySound_Click"/>
         <Button x:Name="buttonOpenFile" Content="Load&#xD;&#xA;" HorizontalAlignment="Left" Margin="230,67,0,0" VerticalAlignment="Top" Height="41" Width="266" Click="buttonOpenFile_Click"/>
+        <Slider x:Name="sliderTime" HorizontalAlignment="Left" Margin="230,272,0,0" VerticalAlignment="Top" Width="266" Maximum="100" Value="-0.3"/>
+        <Slider x:Name="sliderVolume"
+                HorizontalAlignment="Left"
+                Margin="230,312,0,0"
+                VerticalAlignment="Top"
+                Width="266"
+                Maximum="100"
+        />
     </Grid>
 </Window>

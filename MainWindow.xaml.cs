@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using NAudio.Wave;
 
 using Microsoft.Win32;
+using NAudio.CoreAudioApi;
 
 
 namespace HeartfulMusicPlayer
@@ -65,7 +66,18 @@ namespace HeartfulMusicPlayer
             outputDevice.Play();
             
         }
+        /*private void playSoundTestWASAPIEx(string filename)
+        {
+            var outputDevice = new WasapiOut();
+            AudioClientShareMode shareMode = AudioClientShareMode.Exclusive;
+            var audioFile = new AudioFileReader(filename);
 
-        
+            outputDevice.Init(audioFile);
+            outputDevice.Play();
+
+        }*/
+
+
+
     }
 }
